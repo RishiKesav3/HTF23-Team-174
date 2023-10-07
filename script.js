@@ -8,7 +8,7 @@ async function fetchMoviesNowPlaying(){
     const response=await fetch(`${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`);
     const jsonResponse=await response.json();
     const movies=jsonResponse.results;
-    console.log(movies);
+    displayMovies(movies);
 }
 
 function displayMovies(movies){
